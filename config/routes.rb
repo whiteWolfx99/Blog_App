@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :users
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index, :show], param: :id
+  end 
   root 'pages#hello'
 end
