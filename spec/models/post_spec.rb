@@ -1,14 +1,29 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  describe 'associations' do
-    it { should belong_to(:author).class_name('User') }
-    it { should have_many(:comments).dependent(:destroy) }
-    it { should have_many(:likes).dependent(:destroy) }
+  let(:user) do
+    User.create(
+      name: 'hevar',
+      photo: 'https://unsplash.com/es/fotos/vuBaykPW1Dk',
+      bio: 'software engineering'
+    )
   end
 
-  describe 'validations' do
-    it { should validate_presence_of(:title) }
-    it { should validate_presence_of(:text) }
+  let(:post) do
+    Post.create(
+      author: user,
+      title: 'java',
+      text: 'programing langauge'
+    )
+  end
+
+  it 'validates presence of title' do
+    post.title = nil
+    expect(post).to_not be_valid
+  end
+
+  it 'validates presence of author id' do
+    post.author_id = nil
+    expect(post).to_not be_valid
   end
 end

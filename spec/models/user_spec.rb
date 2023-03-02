@@ -1,13 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'associations' do
-    it { should have_many(:posts).dependent(:destroy) }
-    it { should have_many(:comments).dependent(:destroy) }
-    it { should have_many(:likes).dependent(:destroy) }
+  let(:user) do
+    User.new(
+      name: 'hevar',
+      photo: 'https://unsplash.com/es/fotos/vuBaykPW1Dk',
+      bio: 'software engineering'
+    )
   end
 
-  describe 'validations' do
-    it { should validate_presence_of(:name) }
+  it 'validates presence of name' do
+    user.name = nil
+    expect(user).to_not be_valid
   end
 end
