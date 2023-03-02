@@ -1,3 +1,4 @@
+# spec/rails_helper.rb
 require 'test_helper'
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
