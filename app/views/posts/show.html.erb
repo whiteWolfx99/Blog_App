@@ -8,14 +8,11 @@
   </h1>
 
 <div class="post_info">
-  <p>
-    <strong>Comments:</strong>
-    <%= @post.commentsCounter %>
-  </p>
-  <p>
-    <strong>Likes:</strong>
-  </p>
-  </div>
+  <%= form_with model: @like, url: user_post_likes_path(user_id: @post.author.id, post_id: @post.id), local: true do |form| %>
+    <%= form.submit "Add a like", class: "add-like" %>
+  <% end %>
+  <button type="button"><%= link_to "Add a comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id), class: "comment-link" %></button>
+</div>
 
   </div>
   <p>    <%= @post.text %>
