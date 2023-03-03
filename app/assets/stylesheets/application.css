@@ -236,7 +236,6 @@ p {
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 510px) {
   .post_info {
     flex-direction: column;
