@@ -1,19 +1,12 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
-
-   <%= image_tag user.photo %>
-  
-  <p>
-    <strong>Bio:</strong>
-    <%= user.bio %>
-  </p>
-
-  <p>
-    <strong>Postcounter:</strong>
-    <%= user.postsCounter %>
-  </p>
-
+<div id="<%= dom_id user %>" class="row">
+  <div class="img">
+    <%= image_tag user.photo, alt: "User's profile photo", height: 200, width: 150 %>
+  </div>
+  <%= link_to user_path(user), class:"info" do %>
+      <h1><%= user.name %></h1>
+      <p>
+        <strong>Number Of Posts:</strong>
+        <%= user.postsCounter %>
+      </p>
+  <% end %>
 </div>

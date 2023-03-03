@@ -1,6 +1,17 @@
-<%= render @user %>
+<div class="container">
+      <%= render @user %>
+ <div class="bio">
+  <strong>Bio</strong>
+   <%= @user.bio %>
+ </div>
+<div class="post_container">
+<% @user.recentposts.each do |post| %>
+<div class="post_row">
+  <p> <%= post.title %> </p>
+  <%= render post %>
+</div>
+<% end %>
+</div>
+<%= link_to "See all posts", user_posts_path(@user), class: "btn" %>
 
-<div>
-  <%= link_to "Back to users", users_path %>
-  <%= link_to "View user's posts", user_posts_path(@user) %>
 </div>
