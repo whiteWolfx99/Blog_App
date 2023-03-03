@@ -1,6 +1,28 @@
-<%= render @user %>
+<div class="container">
+ <div class="row">
+   <div class="img">
+    <%= image_tag @user.photo, alt: "User's profile photo", height: 200, width: 150 %>
+   </div>
+   <div class="info">
+      <h1><%= @user.name %></h1>
+      <p>
+        <strong>Number Of Posts:</strong>
+        <%= @user.postsCounter %>
+      </p>
+    </div>
+ </div>
+ <div class="bio">
+  <strong>Bio</strong>
+   <%= @user.bio %>
+ </div>
+<div class="post_container">
+<% @user.posts.take(3).each_with_index do |post, index| %>
+<div class="post_row">
+  <p>Post #<%= index + 1 %></p>
+  <%= render post %>
+</div>
+<% end %>
+</div>
+<%= link_to "See all posts", user_posts_path(@user), class: "btn" %>
 
-<div>
-  <%= link_to "Back to users", users_path %>
-  <%= link_to "View user's posts", user_posts_path(@user) %>
 </div>

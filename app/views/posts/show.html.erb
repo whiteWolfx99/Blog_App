@@ -1,5 +1,28 @@
-<%= render @post %>
+<div class="container">
 
-<div>
-<%= link_to "Back to posts", user_posts_path(@user) %>
+<div class="body_container">
+<div class="header">
+
+  <h1>
+<%= @post.title + ' by ' + @user.name %>
+  </h1>
+
+<div class="post_info">
+  <p>
+    <strong>Comments:</strong>
+    <%= @post.commentsCounter %>
+  </p>
+  <p>
+    <strong>Likes:</strong>
+  </p>
+  </div>
+
+  </div>
+  <p>    <%= @post.text %>
+</p>
+</div>
+      <div class="comment_container">
+    <%= render @post.comments %>
+  </div>
+
 </div>
