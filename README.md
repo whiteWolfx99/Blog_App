@@ -4,7 +4,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 Rails-blog-app ](#-rails-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -132,6 +132,12 @@ You can deploy this project using:
 - GitHub: [@githubhandle](https://github.com/whiteWolfx99)
 - Twitter: [@twitterhandle](#)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hevar-hoshang-9a7a68237/)
+
+👤 **Raymond Olisa**
+
+- GitHub: [@dialite](https://github.com/dialite)
+- Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
+- LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa-775929243/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

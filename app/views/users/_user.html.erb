@@ -2,11 +2,11 @@
   <div class="img">
     <%= image_tag user.photo, alt: "User's profile photo", height: 200, width: 150 %>
   </div>
-  <%= link_to user_path(user), class:"info" do %>
-      <h1><%= user.name %></h1>
+  <div class="info">
+      <h1><%= link_to user.name, user_path(user) %></h1>
       <p>
         <strong>Number Of Posts:</strong>
         <%= user.postsCounter %>
       </p>
-  <% end %>
+  </div>
 </div>

@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_user, only: %i[index show]
 
   def index
-    @posts = Post.where(author_id: @user)
+    @posts = @user.posts.includes(:comments)
     @like = current_user.likes.new
   end
 
