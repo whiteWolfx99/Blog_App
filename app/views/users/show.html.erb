@@ -7,7 +7,7 @@
   <div class="post_container">
     <% @user.recentposts.each do |post| %>
       <div class="post_row">
-        <p> <%= post.title %> </p>
+        <p><%= link_to "#{post.title}", user_post_path(@user.id, post.id) %></p>
         <%= render post %>
       </div>
     <% end %>
