@@ -139,7 +139,6 @@ You can deploy this project using:
 - LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa-775929243/)
 - Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -171,7 +170,7 @@ Feel free to check the [issues page](https://github.com/whiteWolfx99/Blog_App/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project and want to support me make cooler projects Give this project a Star.
+If you like this project and want to support me make cooler projects give this project a Star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
