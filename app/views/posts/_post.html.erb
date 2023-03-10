@@ -13,5 +13,9 @@
     <strong>Likes:</strong>
     <%= post.likesCounter %>
   </p>
+
+       <% if can? :destroy, post %>
+        <%=button_to "Delete Post", user_post_path(@user, post), method: :delete %>
+       <% end %>
 </div>
 </div>
