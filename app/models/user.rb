@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
   validates :encrypted_password, presence: true
-  validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  # validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def recentposts
     posts.order(created_at: :desc).limit(3)
