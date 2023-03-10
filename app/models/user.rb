@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  has_many :posts, dependent: :destroy, foreign_key: :author_id
-  has_many :comments, dependent: :destroy, foreign_key: :author_id
-  has_many :likes, dependent: :destroy, foreign_key: :author_id
+  has_many :posts, class_name: 'Post', foreign_key: 'author_id', dependent: :destroy
+  has_many :comments, class_name: 'Comment', foreign_key: 'author_id', dependent: :destroy
+  has_many :likes, class_name: 'Like', foreign_key: 'author_id', dependent: :destroy
 
   validates :name, presence: true
   validates :email, presence: true
@@ -15,5 +15,15 @@ class User < ApplicationRecord
 
   def recentposts
     posts.order(created_at: :desc).limit(3)
+  end
+
+  # User::Roles
+  # The available roles
+  ROLES = %w[admin].freeze
+
+  ROLES.each do |exact_role|
+    define_method "#{exact_role}?" do
+      role == exact_role
+    end
   end
 end
