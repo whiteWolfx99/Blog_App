@@ -136,8 +136,9 @@ You can deploy this project using:
 👤 **Raymond Olisa**
 
 - GitHub: [@dialite](https://github.com/dialite)
-- Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
 - LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa-775929243/)
+- Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
