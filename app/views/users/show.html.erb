@@ -13,11 +13,11 @@
     <% end %>
   </div>
   <button >
-    <%= link_to "See all posts", user_posts_path(@user), class: "all-posts" %>
+    <%= link_to "See all Posts", user_posts_path(@user), class: "all-posts" %>
   </button>
   <% if current_user.id == @user.id %>
     <button type="button">
-      <%= link_to "Create a post", new_user_post_path(@user), class: "create-post" %>
+      <%= link_to "Create a Post", new_user_post_path(@user), class: "create-post" %>
     </button>
   <% end %>
 </div>
