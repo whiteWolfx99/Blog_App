@@ -236,6 +236,12 @@ p {
   cursor: pointer;
 }
 
+.field input {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
 @media screen and (max-width: 510px) {
   .post_info {
     flex-direction: column;

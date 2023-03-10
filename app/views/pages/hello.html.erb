@@ -1,2 +1,9 @@
 <h1>hellow world</h1>
-<p>this is my first app</p>
+
+  <% if user_signed_in? %>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "devise-button" %>
+  <% else %>
+  <button class="devise-button">
+    <%= link_to "Log in", new_user_session_path, class: "link-login"%>
+  </button>
+  <% end %>
